@@ -86,27 +86,27 @@ else if (KristyIsLactoseIntolerant == false && BaoBaoIsLactoseIntolerant == fals
 else if (KristyIsLactoseIntolerant == true || BaoBaoIsLactoseIntolerant == true){
     console.log("Get both normal and almond milk");
 } */
-//failed attempt How can I get this to work?
+//this one works, but is this good coding practice
 /* let KristyIsLactoseIntolerant = false;
 let BaoBaoIsLactoseIntolerant = false;
-if (KristyIsLactoseIntolerant == true){
-    console.log("almond milk");
-}
-if (KristyIsLactoseIntolerant == false){
-    console.log("regular milk");
-}
-if (BaoBaoIsLactoseIntolerant == true){
-    console.log("almond milk");
-}
-if (BaoBaoIsLactoseIntolerant == false){
-    console.log("regular milk");
-}
-let coffeeOrder = `Kristy is getting ${KristyIsLactoseIntolerant} in her coffee, and Bao Bao is getting 
-${BaoBaoIsLactoseIntolerant} in hers`;
+let coffeeOrder = `Kristy is getting ${
+    (() => {
+        if(KristyIsLactoseIntolerant === false) {
+            return `regular milk`;
+        } else {
+            return `almond milk`;
+        }
+    })()} in her coffee, and Bao Bao is getting ${ (() => {
+        if(BaoBaoIsLactoseIntolerant === false) {
+            return `regular milk`;
+        } else {
+            return `almond milk`;
+        }
+    })()} in hers`;
 console.log(coffeeOrder); */
 
 //cupcake tempuratures
-let thermostatTemp = 77;
+/* let thermostatTemp = 77;
 if (thermostatTemp < 68) {
     console.log("too cold");
 }
@@ -118,7 +118,21 @@ else if (thermostatTemp >= 73 && thermostatTemp <= 76) {
 }
 else if (thermostatTemp > 76) {
     console.log("too hot");
-}
-//this bit I'm unsure about
-/*let tempSentence = `If the thermostat says ${thermostatTemp} degrees, the temperanture is ${idk}.`;
-console.log(tempSentence);*/
+}*/
+//this what I'm unsure about
+let thermostatTemp = 65;
+let tempSentence = `If the thermostat says ${thermostatTemp} degrees, the temperature is ${ 
+    (() => {
+        if(thermostatTemp < 68) {
+            return `too cold`;
+        } else if(thermostatTemp >= 68 && thermostatTemp <= 72){
+            return `perfect`;
+        } else if(thermostatTemp >= 73 && thermostatTemp <= 76){
+            return `warm`;
+        } else if(thermostatTemp > 76){
+            return `too hot`;
+        }
+    })()
+}.`;
+console.log(tempSentence);
+ 
