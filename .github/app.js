@@ -194,8 +194,21 @@ names.forEach(names => console.log(name)); //arrow function- immediately returne
 //include some
  */
 //spread operator
-const numbers = [1,2,3];
+/* const numbers = [1,2,3];
 const add = function(x,y,z){
 return x + y + z;
 };
-console.log(add(...numbers));
+console.log(add(...numbers)); */
+
+//challenge 1
+/* let students = ["Riya", "Omor", "Alan", "Jaiyu", "Michael", "Lisa", "Richard"];
+let result = students.filter(students => students.length >= 5);
+console.log (result); */
+
+//challenge 2 
+let students = ["Riya", "Omor", "Alan", "Jaiyu", "Michael", "Lisa", "Richard"];
+// console.log(students.includes("Junshen"));
+ let name1 = (element) => element === "Alan";
+let name2 = (element) => element === "Savva"; 
+console.log(students.some(name1));
+console.log(students.some(name2));
