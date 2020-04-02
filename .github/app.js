@@ -120,7 +120,7 @@ else if (thermostatTemp > 76) {
     console.log("too hot");
 }*/
 //this what I'm unsure about
-let thermostatTemp = 65;
+/* let thermostatTemp = 65;
 let tempSentence = `If the thermostat says ${thermostatTemp} degrees, the temperature is ${ 
     (() => {
         if(thermostatTemp < 68) {
@@ -134,5 +134,68 @@ let tempSentence = `If the thermostat says ${thermostatTemp} degrees, the temper
         }
     })()
 }.`;
-console.log(tempSentence);
+console.log(tempSentence); */
  
+//function input-output
+/* function test() {
+    console.log("test");
+}
+test(); //calling the function */
+
+//better example
+/* function argument(name1, name2){
+    console.log(name1, name2);
+}
+argument("Val","Eric"); */
+
+/* const add =  function(x,y){
+    return x + y; //immediately ends the function
+}
+console.log(add(18,3)); */
+
+/* let name ="Me";
+name = "You";
+const name ="Me"; //error,can't be redefined
+name = "You"; */
+
+/* const hello = function(){
+    alert("hello"); //makes a popup
+};
+const bye = function(){
+    alert("bye")
+}
+//do it like this to not repeat yourself
+const beatles = function() {
+    hello();
+    bye();
+};
+beatles(); */
+
+//scope
+/* const name = "Michael"; //global space
+function outerFunc() { //nothing outside this function affects it
+    //closure- protect our variables from changing
+    const name = "Sarah" //function scope- if you comment this out it will say Michael
+    function displayName(){
+        console.log(name);//inner function can access outer function
+    }
+    return displayName; //produces a copy we can utilize 
+}
+const myFunc = outerFunc();//closure
+myFunc();
+ */
+
+/*  //arrays
+ const names = ["Diego","Frid","Christian",
+ "Valerie","Haoran"];
+ //names.push("Caroline"); //adds names to an array
+names.forEach(names => console.log(name)); //arrow function- immediately returned
+//names.filter(somecode).forEach(name() => console.log(name))
+//include some
+ */
+//spread operator
+const numbers = [1,2,3];
+const add = function(x,y,z){
+return x + y + z;
+};
+console.log(add(...numbers));
